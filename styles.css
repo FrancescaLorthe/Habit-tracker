@@ -1,114 +1,47 @@
-/* ========================================
-   CSS Variables - Color Palette & Tokens
-   ======================================== */
+/* ============================================================
+   CSS Variables
+   ============================================================ */
 :root {
-  /* Primary Indigo */
-  --color-indigo-900: #1e1b4b;
-  --color-indigo-800: #312e81;
-  --color-indigo-700: #3730a3;
-  --color-indigo-600: #4f46e5;
-  --color-indigo-500: #6366f1;
-  --color-indigo-400: #818cf8;
-  --color-indigo-300: #a5b4fc;
-  --color-indigo-200: #c7d2fe;
-  --color-indigo-100: #e0e7ff;
-  --color-indigo-50:  #eef2ff;
+  --color-primary:       #4f46e5;
+  --color-primary-dark:  #3730a3;
+  --color-accent:        #10b981;
+  --color-accent-dark:   #059669;
 
-  /* Emerald Accent */
-  --color-emerald-700: #047857;
-  --color-emerald-600: #059669;
-  --color-emerald-500: #10b981;
-  --color-emerald-400: #34d399;
-  --color-emerald-300: #6ee7b7;
-  --color-emerald-200: #a7f3d0;
-  --color-emerald-100: #d1fae5;
+  --color-bg:            #f9fafb;
+  --color-bg-card:       #ffffff;
+  --color-border:        #e5e7eb;
+  --color-border-light:  #f3f4f6;
 
-  /* Semantic Colors */
-  --color-primary:       var(--color-indigo-600);
-  --color-primary-dark:  var(--color-indigo-700);
-  --color-primary-light: var(--color-indigo-500);
-  --color-accent:        var(--color-emerald-500);
-  --color-accent-light:  var(--color-emerald-400);
-  --color-accent-bg:     var(--color-emerald-100);
+  --color-text:          #111827;
+  --color-text-muted:    #6b7280;
+  --color-text-inverse:  #ffffff;
 
-  /* Backgrounds */
-  --color-bg-primary:   #f9fafb;
-  --color-bg-secondary: var(--color-indigo-50);
-  --color-bg-card:      #ffffff;
-  --color-bg-footer:    var(--color-indigo-900);
+  --color-done-bg:       #ecfdf5;
+  --color-done-border:   #a7f3d0;
 
-  /* Text */
-  --color-text-primary:    #111827;
-  --color-text-secondary:  #374151;
-  --color-text-muted:      #6b7280;
-  --color-text-inverse:    #ffffff;
-  --color-text-link:       var(--color-indigo-600);
-  --color-text-link-hover: var(--color-emerald-600);
+  --font: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
 
-  /* Borders */
-  --color-border:       #e5e7eb;
-  --color-border-light: #f3f4f6;
-
-  /* Typography */
-  --font-heading: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
-  --font-body:    'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
-
-  /* Font Sizes */
-  --text-xs:   0.75rem;
-  --text-sm:   0.875rem;
-  --text-base: 1rem;
-  --text-lg:   1.125rem;
-  --text-xl:   1.25rem;
-  --text-2xl:  1.5rem;
-  --text-3xl:  1.875rem;
-  --text-4xl:  2.25rem;
-  --text-5xl:  3rem;
-
-  /* Font Weights */
-  --font-normal:   400;
-  --font-medium:   500;
-  --font-semibold: 600;
-  --font-bold:     700;
-
-  /* Line Heights */
-  --leading-tight:   1.25;
-  --leading-snug:    1.375;
-  --leading-normal:  1.5;
-  --leading-relaxed: 1.625;
-  --leading-loose:   1.75;
-
-  /* Spacing Scale */
-  --space-1:  0.25rem;
-  --space-2:  0.5rem;
-  --space-3:  0.75rem;
-  --space-4:  1rem;
-  --space-5:  1.25rem;
-  --space-6:  1.5rem;
-  --space-8:  2rem;
-  --space-10: 2.5rem;
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
   --space-12: 3rem;
-  --space-16: 4rem;
 
-  /* Layout */
-  --max-width:        1200px;
-  --border-radius:    6px;
-  --border-radius-lg: 10px;
+  --radius:    6px;
+  --radius-lg: 10px;
 
-  /* Shadows */
-  --shadow-sm:    0 1px 2px rgba(79, 70, 229, 0.05);
-  --shadow-md:    0 4px 12px rgba(79, 70, 229, 0.08);
-  --shadow-lg:    0 8px 24px rgba(79, 70, 229, 0.12);
-  --shadow-hover: 0 12px 32px rgba(79, 70, 229, 0.18);
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
 
-  /* Transitions */
-  --transition-fast: 150ms ease;
-  --transition-base: 200ms ease;
-  --transition-slow: 300ms ease;
+  --transition: 150ms ease;
 }
 
-/* ========================================
-   Reset & Base Styles
-   ======================================== */
+/* ============================================================
+   Reset & Base
+   ============================================================ */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -117,605 +50,328 @@
 
 html {
   font-size: 16px;
-  scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
-  font-family: var(--font-body);
-  font-size: var(--text-base);
-  font-weight: var(--font-normal);
-  line-height: var(--leading-relaxed);
-  color: var(--color-text-primary);
-  background-color: var(--color-bg-primary);
+  font-family: var(--font);
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  min-height: 100vh;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* ========================================
-   Typography
-   ======================================== */
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-heading);
-  font-weight: var(--font-bold);
-  line-height: var(--leading-tight);
-  color: var(--color-text-primary);
-  letter-spacing: -0.01em;
-}
-
-h1 { font-size: var(--text-4xl); margin-bottom: var(--space-6); }
-h2 { font-size: var(--text-3xl); margin-bottom: var(--space-4); }
-h3 { font-size: var(--text-xl);  margin-bottom: var(--space-3); }
-h4 { font-size: var(--text-lg);  margin-bottom: var(--space-2); }
-
-p {
-  margin-bottom: var(--space-4);
-  color: var(--color-text-secondary);
-}
-
-p:last-child { margin-bottom: 0; }
-
-strong {
-  font-weight: var(--font-semibold);
-  color: var(--color-text-primary);
-}
-
-/* ========================================
-   Links
-   ======================================== */
-a {
-  color: var(--color-text-link);
-  text-decoration: none;
-  transition: color var(--transition-fast);
-}
-
-a:hover { color: var(--color-text-link-hover); }
-
-/* ========================================
+/* ============================================================
    Layout
-   ======================================== */
+   ============================================================ */
 .container {
-  max-width: var(--max-width);
+  max-width: 640px;
   margin: 0 auto;
-  padding: 0 var(--space-6);
+  padding: 0 var(--space-4);
 }
 
-section {
-  padding: var(--space-16) 0;
-}
-
-/* ========================================
-   Header & Navigation
-   ======================================== */
+/* ============================================================
+   Header
+   ============================================================ */
 header {
   background-color: var(--color-bg-card);
+  border-bottom: 1px solid var(--color-border);
   box-shadow: var(--shadow-sm);
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  border-bottom: 1px solid var(--color-border-light);
-}
-
-.header-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   padding: var(--space-4) 0;
 }
 
 .logo {
-  font-family: var(--font-heading);
-  font-size: var(--text-2xl);
-  font-weight: var(--font-bold);
+  font-size: 1.5rem;
+  font-weight: 700;
   color: var(--color-primary);
   letter-spacing: -0.02em;
-  transition: color var(--transition-fast);
 }
-
-.logo:hover { color: var(--color-primary-dark); }
 
 .logo span {
   color: var(--color-accent);
-  transition: color var(--transition-fast);
 }
 
-.logo:hover span { color: var(--color-emerald-700); }
+/* ============================================================
+   Main
+   ============================================================ */
+main {
+  padding: var(--space-8) 0 var(--space-12);
+}
 
-nav ul {
+section {
+  margin-bottom: var(--space-8);
+}
+
+section h2 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: var(--space-4);
+}
+
+/* ============================================================
+   Add Habit Form
+   ============================================================ */
+.add-habit-form {
   display: flex;
-  list-style: none;
-  gap: var(--space-8);
+  gap: var(--space-3);
 }
 
-nav a {
-  font-size: var(--text-base);
-  font-weight: var(--font-medium);
-  color: var(--color-text-secondary);
-  padding: var(--space-2) 0;
-  position: relative;
-  transition: color var(--transition-fast);
+.add-habit-form input {
+  flex: 1;
+  padding: var(--space-3) var(--space-4);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  font-family: var(--font);
+  font-size: 1rem;
+  color: var(--color-text);
+  background-color: var(--color-bg-card);
+  transition: border-color var(--transition), box-shadow var(--transition);
 }
 
-nav a::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background-color: var(--color-accent);
-  transition: width var(--transition-base);
+.add-habit-form input::placeholder {
+  color: var(--color-text-muted);
 }
 
-nav a:hover { color: var(--color-text-primary); }
-
-nav a:hover::after,
-nav a.active::after { width: 100%; }
-
-nav a.active { color: var(--color-text-primary); }
-
-.nav-toggle {
-  display: none;
-  background: none;
-  border: none;
-  font-size: var(--text-2xl);
-  cursor: pointer;
-  color: var(--color-primary);
-  padding: var(--space-2);
-  transition: color var(--transition-fast);
+.add-habit-form input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.12);
 }
 
-.nav-toggle:hover { color: var(--color-accent); }
-
-/* ========================================
+/* ============================================================
    Buttons
-   ======================================== */
+   ============================================================ */
 .btn {
   display: inline-block;
-  padding: var(--space-3) var(--space-6);
-  border-radius: var(--border-radius);
-  font-family: var(--font-body);
-  font-size: var(--text-base);
-  font-weight: var(--font-semibold);
-  text-align: center;
+  padding: var(--space-3) var(--space-5);
+  border-radius: var(--radius);
+  font-family: var(--font);
+  font-size: 0.9375rem;
+  font-weight: 600;
   cursor: pointer;
-  border: 2px solid transparent;
-  transition: all var(--transition-base);
+  border: none;
+  transition: background-color var(--transition), transform var(--transition), box-shadow var(--transition);
+  white-space: nowrap;
 }
 
 .btn-primary {
   background-color: var(--color-primary);
   color: var(--color-text-inverse);
-  border-color: var(--color-primary);
 }
 
 .btn-primary:hover {
   background-color: var(--color-primary-dark);
-  border-color: var(--color-primary-dark);
-  color: var(--color-text-inverse);
-  transform: translateY(-2px);
+  transform: translateY(-1px);
   box-shadow: var(--shadow-md);
 }
 
 .btn-primary:active {
   transform: translateY(0);
-  box-shadow: var(--shadow-sm);
 }
 
-.btn-secondary {
-  background-color: transparent;
-  color: var(--color-text-inverse);
-  border-color: var(--color-text-inverse);
-}
-
-.btn-secondary:hover {
-  background-color: var(--color-text-inverse);
-  color: var(--color-primary);
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
-}
-
-.btn-secondary:active { transform: translateY(0); }
-
-.btn-outline {
-  background-color: transparent;
-  color: var(--color-primary);
-  border-color: var(--color-primary);
-}
-
-.btn-outline:hover {
-  background-color: var(--color-primary);
-  color: var(--color-text-inverse);
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
-}
-
-/* ========================================
-   Hero Section
-   ======================================== */
-.hero {
-  background: linear-gradient(135deg, var(--color-indigo-800) 0%, var(--color-indigo-600) 60%, var(--color-emerald-600) 100%);
-  color: var(--color-text-inverse);
-  padding: var(--space-16) 0;
-  text-align: center;
-  min-height: 480px;
-  display: flex;
-  align-items: center;
-}
-
-.hero h1 {
-  color: var(--color-text-inverse);
-  font-size: var(--text-5xl);
-  margin-bottom: var(--space-6);
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
-}
-
-.hero p {
-  font-size: var(--text-lg);
-  max-width: 600px;
-  margin: 0 auto var(--space-8);
-  color: var(--color-indigo-200);
-  line-height: var(--leading-relaxed);
-}
-
-.hero-ctas {
-  display: flex;
-  gap: var(--space-4);
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-/* ========================================
-   Section Titles
-   ======================================== */
-.section-title {
-  text-align: center;
-  margin-bottom: var(--space-12);
-}
-
-.section-title h2 {
-  position: relative;
-  display: inline-block;
-  margin-bottom: var(--space-4);
-}
-
-.section-title h2::after {
-  content: '';
-  position: absolute;
-  bottom: -8px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 60px;
-  height: 3px;
-  background: linear-gradient(90deg, var(--color-accent), var(--color-accent-light));
-  border-radius: 2px;
-}
-
-.section-title p {
-  color: var(--color-text-muted);
-  font-size: var(--text-lg);
-  margin: 0;
-  margin-top: var(--space-4);
-}
-
-/* ========================================
-   Grid System
-   ======================================== */
-.grid {
-  display: grid;
-  gap: var(--space-8);
-}
-
-.grid-2 { grid-template-columns: repeat(2, 1fr); }
-.grid-3 { grid-template-columns: repeat(3, 1fr); }
-.grid-4 { grid-template-columns: repeat(4, 1fr); }
-
-/* ========================================
-   Cards
-   ======================================== */
-.card {
-  background-color: var(--color-bg-card);
-  border-radius: var(--border-radius-lg);
-  padding: var(--space-8);
-  box-shadow: var(--shadow-md);
-  border: 1px solid var(--color-border-light);
-  transition: transform var(--transition-base), box-shadow var(--transition-base);
-}
-
-.card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-hover);
-}
-
-.card h3 { color: var(--color-text-primary); }
-.card p   { color: var(--color-text-secondary); }
-
-/* ========================================
-   Features Section
-   ======================================== */
-.features {
-  background-color: var(--color-bg-secondary);
-}
-
-.feature-card {
-  text-align: center;
-}
-
-.feature-icon {
-  font-size: 2.5rem;
-  margin-bottom: var(--space-4);
-  display: block;
-}
-
-/* ========================================
-   How It Works Section
-   ======================================== */
-.how-it-works {
-  background-color: var(--color-bg-primary);
-}
-
-.step-card {
-  text-align: center;
-  padding: var(--space-8);
-  border-radius: var(--border-radius-lg);
-  background-color: var(--color-bg-card);
-  border: 1px solid var(--color-border-light);
-  box-shadow: var(--shadow-md);
-  transition: transform var(--transition-base), box-shadow var(--transition-base);
-}
-
-.step-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-hover);
-}
-
-.step-number {
-  width: 52px;
-  height: 52px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
-  color: var(--color-text-inverse);
-  font-size: var(--text-xl);
-  font-weight: var(--font-bold);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto var(--space-5);
-  box-shadow: var(--shadow-md);
-}
-
-.step-card h3 { color: var(--color-text-primary); }
-.step-card p  { color: var(--color-text-muted); }
-
-/* ========================================
-   Pricing Section
-   ======================================== */
-.pricing {
-  background-color: var(--color-bg-secondary);
-}
-
-.pricing-grid {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.pricing-card {
+/* ============================================================
+   Habit List
+   ============================================================ */
+.habit-list {
+  list-style: none;
   display: flex;
   flex-direction: column;
-  gap: var(--space-4);
-  position: relative;
+  gap: var(--space-3);
 }
 
-.pricing-card--pro {
-  border: 2px solid var(--color-primary);
-  box-shadow: var(--shadow-lg);
-}
-
-.pricing-badge {
-  position: absolute;
-  top: -14px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
-  color: var(--color-text-inverse);
-  font-size: var(--text-xs);
-  font-weight: var(--font-bold);
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  padding: var(--space-1) var(--space-4);
-  border-radius: 999px;
-  white-space: nowrap;
-}
-
-.pricing-tier {
-  font-size: var(--text-xl);
-  font-weight: var(--font-bold);
-  color: var(--color-text-primary);
-}
-
-.pricing-price {
-  font-size: var(--text-5xl);
-  font-weight: var(--font-bold);
-  color: var(--color-primary);
-  line-height: 1;
-}
-
-.pricing-price span {
-  font-size: var(--text-lg);
-  font-weight: var(--font-normal);
-  color: var(--color-text-muted);
-}
-
-.pricing-desc {
-  color: var(--color-text-muted);
-  font-size: var(--text-sm);
-}
-
-.pricing-features {
-  list-style: none;
-  flex: 1;
-}
-
-.pricing-features li {
-  padding: var(--space-2) 0;
-  border-bottom: 1px solid var(--color-border-light);
-  color: var(--color-text-secondary);
-  font-size: var(--text-sm);
-  padding-left: var(--space-6);
-  position: relative;
-}
-
-.pricing-features li::before {
-  content: '✓';
-  position: absolute;
-  left: 0;
-  color: var(--color-accent);
-  font-weight: var(--font-bold);
-}
-
-.pricing-features li:last-child {
-  border-bottom: none;
-}
-
-.pricing-card .btn {
-  width: 100%;
-  margin-top: auto;
-}
-
-/* ========================================
-   Footer
-   ======================================== */
-footer {
-  background-color: var(--color-bg-footer);
-  color: var(--color-text-inverse);
-  padding: var(--space-8) 0;
-}
-
-.footer-row {
+/* ============================================================
+   Habit Item
+   ============================================================ */
+.habit-item {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap;
   gap: var(--space-4);
+  padding: var(--space-4) var(--space-5);
+  background-color: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  transition: border-color var(--transition), background-color var(--transition), box-shadow var(--transition);
 }
 
-.footer-logo {
-  font-size: var(--text-xl);
-  font-weight: var(--font-bold);
-  color: var(--color-text-inverse);
+.habit-item:hover {
+  box-shadow: var(--shadow-md);
 }
 
-.footer-logo span {
-  color: var(--color-emerald-400);
+.habit-item--done {
+  background-color: var(--color-done-bg);
+  border-color: var(--color-done-border);
 }
 
-.footer-copy {
-  font-size: var(--text-sm);
-  color: var(--color-text-inverse);
-  opacity: 0.7;
-  margin: 0;
-}
-
-.footer-nav {
+/* Habit info */
+.habit-info {
   display: flex;
-  gap: var(--space-6);
+  align-items: center;
+  gap: var(--space-3);
+  min-width: 0; /* allow text truncation */
 }
 
-.footer-nav a {
+.habit-name {
+  font-weight: 500;
+  color: var(--color-text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.habit-item--done .habit-name {
+  text-decoration: line-through;
+  color: var(--color-text-muted);
+}
+
+.habit-streak {
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* Habit action buttons */
+.habit-actions {
+  display: flex;
+  gap: var(--space-2);
+  flex-shrink: 0;
+}
+
+.btn-complete,
+.btn-edit,
+.btn-delete {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius);
+  border: 1px solid var(--color-border);
+  background-color: var(--color-bg);
+  cursor: pointer;
+  font-size: 0.875rem;
+  transition: background-color var(--transition), border-color var(--transition), transform var(--transition);
+}
+
+.btn-complete:hover {
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
   color: var(--color-text-inverse);
-  font-size: var(--text-sm);
-  opacity: 0.75;
-  transition: opacity var(--transition-fast), color var(--transition-fast);
+  transform: scale(1.08);
 }
 
-.footer-nav a:hover {
-  opacity: 1;
-  color: var(--color-emerald-400);
+.btn-complete--done {
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+  color: var(--color-text-inverse);
 }
 
-/* ========================================
-   Responsive Design
-   ======================================== */
-@media (max-width: 992px) {
-  :root {
-    --text-5xl: 2.5rem;
-    --text-4xl: 2rem;
-  }
-
-  .grid-4 { grid-template-columns: repeat(2, 1fr); }
+.btn-complete--done:hover {
+  background-color: var(--color-accent-dark);
+  border-color: var(--color-accent-dark);
 }
 
-@media (max-width: 768px) {
-  :root {
-    --text-5xl: 2rem;
-    --text-4xl: 1.75rem;
-    --text-3xl: 1.5rem;
-  }
-
-  section { padding: var(--space-12) 0; }
-
-  .container { padding: 0 var(--space-4); }
-
-  .nav-toggle { display: block; }
-
-  nav {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background-color: var(--color-bg-card);
-    box-shadow: var(--shadow-lg);
-    display: none;
-    border-top: 1px solid var(--color-border-light);
-  }
-
-  nav.active { display: block; }
-
-  nav ul {
-    flex-direction: column;
-    padding: var(--space-4);
-    gap: 0;
-  }
-
-  nav li { border-bottom: 1px solid var(--color-border-light); }
-  nav li:last-child { border-bottom: none; }
-
-  nav a {
-    display: block;
-    padding: var(--space-4);
-  }
-
-  nav a::after { display: none; }
-
-  .hero { min-height: 380px; padding: var(--space-12) 0; }
-
-  .hero-ctas { flex-direction: column; align-items: center; }
-  .hero-ctas .btn { width: 100%; max-width: 280px; }
-
-  .grid-2,
-  .grid-3 { grid-template-columns: 1fr; }
-
-  .pricing-grid { max-width: 100%; }
-
-  .footer-row { flex-direction: column; text-align: center; }
-  .footer-nav { justify-content: center; }
+.btn-edit:hover {
+  background-color: #eff6ff;
+  border-color: #bfdbfe;
+  transform: scale(1.08);
 }
 
+.btn-delete:hover {
+  background-color: #fef2f2;
+  border-color: #fecaca;
+  transform: scale(1.08);
+}
+
+/* ============================================================
+   Inline Edit Input
+   ============================================================ */
+.habit-edit-input {
+  flex: 1;
+  font-family: var(--font);
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-primary);
+  border-radius: var(--radius);
+  padding: var(--space-1) var(--space-2);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.12);
+  min-width: 0;
+  width: 100%;
+}
+
+.btn-save {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius);
+  border: 1px solid var(--color-primary);
+  background-color: var(--color-primary);
+  color: var(--color-text-inverse);
+  cursor: pointer;
+  font-size: 0.875rem;
+  transition: background-color var(--transition), transform var(--transition);
+}
+
+.btn-save:hover {
+  background-color: var(--color-primary-dark);
+  transform: scale(1.08);
+}
+
+/* ============================================================
+   Empty State
+   ============================================================ */
+.empty-state {
+  text-align: center;
+  color: var(--color-text-muted);
+  padding: var(--space-8) 0;
+  font-size: 0.9375rem;
+}
+
+/* ============================================================
+   Footer
+   ============================================================ */
+footer {
+  border-top: 1px solid var(--color-border);
+  padding: var(--space-6) 0;
+  text-align: center;
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+}
+
+/* ============================================================
+   Responsive
+   ============================================================ */
 @media (max-width: 480px) {
-  :root {
-    --text-5xl: 1.75rem;
-    --text-4xl: 1.5rem;
-    --text-3xl: 1.25rem;
+  .add-habit-form {
+    flex-direction: column;
   }
 
-  .hero { min-height: 320px; }
+  .add-habit-form .btn {
+    width: 100%;
+  }
 
-  .card { padding: var(--space-6); }
+  .habit-item {
+    flex-wrap: wrap;
+    gap: var(--space-3);
+  }
 
-  .grid-4 { grid-template-columns: 1fr; }
+  .habit-info {
+    flex: 1 1 100%;
+  }
+
+  .habit-actions {
+    width: 100%;
+    justify-content: flex-end;
+  }
 }
